@@ -213,6 +213,30 @@ de aproximaciones integrales mediante sumas de Riemann.
 </div>
 """, unsafe_allow_html=True)
 
+# PESTAÑAS
+tab1, tab2 = st.tabs([
+    "📚 Fundamentación Teórica",
+    "🧮 Simulador"
+])
+with tab1:
+
+    st.header("¿Qué son las sumas de Riemann?")
+
+    st.write("""
+    Las sumas de Riemann son un método utilizado para aproximar
+    el área bajo una curva mediante rectángulos.
+    """)
+
+    st.latex(r"\Delta x = \frac{b-a}{n}")
+
+    st.latex(r"\sum_{i=0}^{n-1} f(x_i)\Delta x")
+
+    st.write("""
+    A medida que aumenta el número de rectángulos,
+    la aproximación se acerca al valor exacto de la integral definida.
+    """)
+    
+with tab2: 
 # SIDEBAR
 st.sidebar.header("Configuración")
 
@@ -426,4 +450,4 @@ try:
 
 except:
 
-    st.error("⚠️ Error en la función ingresada")
+    st.error("Error en la función ingresada")
